@@ -76,11 +76,11 @@ ymax <- 67.3
 # wtdLyrs<-c("bio1","bio2","bio3","bio5","bio6","bio8","bio11","bio12","bio16", "bio18")
 # wtdLyrsI<-which(names(envcrop) %in% wtdLyrs)
 # envcrop<-subset(envcrop,wtdLyrsI)
-# writeRaster(envcrop,"C:/.../Climate Change Pests/Env_Data/EuropeData/BioClims.tif", filetype = 'GTiff',overwrite = T)
+# writeRaster(envcrop,"C:/.../Climate Change Pests/Env_Data/EuropeData/EuropeBioClims.tif", filetype = 'GTiff',overwrite = T)
 # 
 
 ####if already done clim processing and occurence cleaning
-envcrop<-rast("C:/.../Climate Change Pests/Env_Data/EuropeData/BioClims.tif")
+envcrop<-rast("C:/.../Climate Change Pests/Env_Data/EuropeData/EuropeBioClims.tif")
 names(envcrop)
 #plot(envcrop)
 
@@ -286,7 +286,7 @@ plot(europe,add=TRUE)
 points(pres_train, pch='+', cex=0.2)
 
 #now predict for NZ using this model
-envcrop<-rast("C:/.../Climate Change Pests/Env_Data/NZdata/BioClims.tif")
+envcrop<-rast("C:/.../Climate Change Pests/Env_Data/NZdata/NZBioClims.tif")
 # exclLyr<-which(names(envcrop)=="bio11")
 # envcrop<-subset(envcrop,exclLyr,negate=TRUE)
 #exclLyrs<-c("bio11","bio3","bio8","bio18")
